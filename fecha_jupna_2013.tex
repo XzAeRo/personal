@@ -1,0 +1,138 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenx} %Codificacion del texto (ISO Latin1 encoding)
+
+\usepackage{fancyhdr} %Permite acomodar a tu gusto la parte de arriba y
+% abajo del documento
+\usepackage[spanish]{babel} %Permite definir el idioma del dcumento
+\usepackage{graphicx} %Permite exportar imagenes en formato eps
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{url} %Tipo de fuente para correos y paginas
+\usepackage{pgf}
+\usepackage{fleqn}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fancyvrb}
+\usepackage{makeidx}
+\usepackage{colortbl} %Permite colocar colores a las tablas
+\usepackage{booktabs}
+\usepackage{moreverb}
+\usepackage[final]{pdfpages}
+%%%%%%%%%%
+%Margenes%
+%%%%%%%%%%
+\parskip 1mm %Espacio entre parrafos
+
+\setlength{\topmargin}{0pt}
+\topmargin      0.5cm
+\oddsidemargin	0.1cm  % Ancho Letter 21,59cm
+\evensidemargin 0.5cm  % Alto  Letter 27,81cm
+\textwidth	17cm%15.5cm
+\textheight	21.0cm
+\headsep	4 mm
+\parindent	0.5cm
+%%%%%%%%%%%%%%%%%%%%%%
+%Estilo del documento%
+%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancyplain}
+
+\renewcommand{\footrulewidth}{0pt} %Linea de separacion inferior
+\renewcommand{\headrulewidth}{0pt} %Linea de separacion inferior
+
+\newcommand{\primaria}[1]{
+	\textbf{\underline{#1}}
+}
+
+\newcommand{\foranea}[1]{
+	\textbf{\textsl{#1}}
+}
+
+\newcommand{\primyfor}[1]{
+	\underline{\foranea{#1}}
+}
+
+\makeatletter
+\newcommand\subsubsubsection{\@startsection {paragraph}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {1.5ex \@plus.2ex}%
+                                   {\normalfont\bfseries}}
+                       
+                                
+                                 
+\newcommand\subsubsubsubsection{\@startsection {subparagraph}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {1.5ex \@plus.2ex}%
+                                  
+                                   {\normalfont\bfseries}}
+\rhead{}
+\cfoot{}
+\lhead{}
+\newcommand{\tab}{\hspace*{4em}}
+\makeatother
+
+
+\begin{document}
+\hfill Sociedad de Jóvenes
+
+\hfill San Jorge \#546
+
+\hfill El Belloto, Quilpué
+
+\hfill Fono +56 32 233 2578
+
+\hfill \textbf{Solicitud a directiva JUPNA}
+\\
+\textbf{Sociedad de Jóvenes} \\ IPNA El Renuevo \\  \today \\
+
+Estimados miembros de la directiva JUPNA:\\
+
+Nos dirigimos a Ustedes en calidad de organizadores de la conferencia JUPNA 2013 a realizarse en Belloto, Quinta Región, para poder resolver la incertidumbre que existe respecto a la fecha de la conferencia JUPNA, debido a que el histórico 12 de octubre (feriado que se aprovecha para realizar la JUPNA), cae un día sábado, por lo que anula la posibilidad de realizar la JUPNA al rededor de esa fecha. Hacemos llegar esta inquietud debido a que es de suma importancia definir en el corto plazo el lugar donde se realice el evento, ya que \textbf{para solicitar un lugar se debe tener un fecha definida.}
+
+Mediante una reciente reunión de la directiva del distrito norte, se nos ha hecho llegar la información de que existen 3 fechas tentativas para la JUPNA, las cuales caían dentro de los meses de agosto, septiembre y octubre respectivamente.\\
+
+
+Como directiva local y organizadora, en conjunto con la directiva del distrito norte, con apoyo del Consistorio de Belloto (consistorio local), creemos que el fin de semana largo que parte el \textbf{31 de octubre y termina el 3 de noviembre}, es la fecha ideal por las siguientes razones:
+
+\begin{itemize}
+\item Como directiva organizadora, nos da el tiempo suficiente para organizar el evento, lo cual es una considerable ventaja respecto a realizar un evento en agosto.
+\item No es una fecha complicada donde los precios de los pasajes suban demasiado, teniendo en cuenta que muchos jóvenes deberán viajar desde Concepción, Talca, Linares, etc. Esto representa una ventaja sobre cualquier fecha en septiembre, ya que es de conocimiento general que los pasajes suben de precio demasiado para esas fechas.
+\item La gran cantidad de días que tiene ese fin de semana largo permitiría que la JUPNA comience en un dia feriado en vez de un dia de semana, como lo es normalmente.
+\item No existe ningún evento que no sea recalendarizable por alguna otra fecha.
+\end{itemize}
+
+Como sociedad organizadora, queremos entregar la mejor JUPNA para nuestros hermanos en Cristo, por lo cual velamos por un evento ojalá gratuito, y que tenga una organización digna del Dios para el cual trabajamos.
+
+Les solicitamos cordialmente a que puedan considerar nuestras inquietudes y todas las razones por la cual creemos que la fecha propuesta por nosotros es la mejor opción.\\
+
+Sin nada más que agregar, nos despedimos deseandoles un muy feliz año 2013 y que el Señor les bendiga en cada una de sus actividades.\\
+
+Se despide atentamente, \textit{Sociedad de Jóvenes - El Renuevo, Belloto}.
+
+\vspace{50px}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{c}
+\hline
+Gustavo Silva\\
+\textbf{Presidente Sociedad Local}
+\end{tabular}
+\hspace{30px}
+\begin{tabular}{c}
+\hline
+Victor Gonzalez\\
+\textbf{Secretario Sociedad Local}
+\end{tabular}
+\end{table}
+
+\vspace{50px}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{c}
+\hline
+\textbf{Consistorio Iglesia El Belloto}
+\end{tabular}
+\end{table}
+
+\end{document}
