@@ -1,4 +1,4 @@
-SRC=curriculum
+SRC=VictorGonzalez.en
 
 all:
 	pdflatex $(SRC).tex
@@ -8,7 +8,13 @@ all:
 	rm -rf *.{out,log,dvi,aux,blg,bbl}
 
 clean:
-	rm -rf *.{out,log,dvi,aux,blg,bbl}
+	rm -rf *.out
+	rm -rf *.log
+	rm -rf *.dvi
+	rm -rf *.aux
+	rm -rf *.blg
+	rm -rf *.bbl
+
 
 distclean:
 	rm -rf $(SRC).pdf
