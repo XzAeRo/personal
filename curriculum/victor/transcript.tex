@@ -1,0 +1,138 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenx} %Codificacion del texto (ISO Latin1 encoding)
+
+\usepackage{fancyhdr} %Permite acomodar a tu gusto la parte de arriba y
+% abajo del documento
+\usepackage[spanish]{babel} %Permite definir el idioma del dcumento
+\usepackage{graphicx} %Permite exportar imagenes en formato eps
+\usepackage{url} %Tipo de fuente para correos y paginas
+\usepackage{pgf}
+\usepackage{fleqn}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bigints}
+\usepackage{fancyvrb}
+\usepackage{makeidx}
+\usepackage{colortbl} %Permite colocar colores a las tablas
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{moreverb}
+\usepackage{rotating}
+\usepackage{lastpage}
+\usepackage[final]{pdfpages}
+%%%%%%%%%%
+%Margenes%
+%%%%%%%%%%
+\usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm,footskip=1.5cm,headheight=1.5cm,headsep=.5cm,textheight=3cm]{geometry}
+%%%%%%%%%%%%%%%%%%%%%%
+%Estilo del documento%
+%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancyplain}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fancyheadings. Top y Bottom del documento%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Recuerde que en este documento la portada del documento no posee
+% numeracion, pero de igual manera llamaremos a esa primera pagina la numero
+% 1, y la que viene la dos. Esto es para tener una idea de las que
+% llamaremos pares e impares
+\lhead{Unofficial Transcript} %Parte superior izquierda
+\rhead{\bf \it Victor Gonzalez} %Parte superior derecha
+\lfoot{\it Universidad Técnica Federico Santa María} %Parte inferior izquierda. \thepage indica
+% el numero de pagina
+\cfoot{} %Parte inferior central
+\rfoot{page \thepage\ of \pageref{LastPage}} %Parte inferior derecha
+\renewcommand{\footrulewidth}{0.4pt} %Linea de separacion inferior
+
+\begin{document}
+\section{Transcript}
+
+
+\begin{center}
+    \begin{tabular}{ | l | c | c | c |}
+    \hline
+    \bf Course Name & \bf Credits & \bf Grade & \bf Status \\ \hline
+    
+	\hline
+	Programming & 3 & 71 & Finished \\ \hline
+	Computer Science Fundamentals 1 & 4 & 57 & Finished \\ \hline
+	Computer Science Fundamentals 2 & 3 & 55 & Finished \\ \hline
+	Scientific Computing 1 & 4 & 63 & Finished \\ \hline
+	Scientific Computing 2 & 4 & 60 & Finished \\ \hline
+	Data Structures & 4 & 55 & Finished \\ \hline
+	Databases & 4 & 77 & Finished \\ \hline
+	Data Management & 4 & 64 & Finished \\ \hline
+	Systems Theory & 3 & 66 & Finished \\ \hline
+	Programming Languages & 4 & 65 & Finished \\ \hline
+	Computer Architecture & 4 & 75 & Finished \\ \hline
+	Information Systems & 3 & 62 & Finished \\ \hline
+	Software Engineering Fundamentals & 3 & 80 & Finished \\ \hline
+	Operative Systems & 4 & 73 & Finished \\ \hline
+	Computational Statistics & 4 & 58 & Finished \\ \hline
+	Software Engineering & 3 & 67 & Finished \\ \hline
+	Introduction to Theorical Computer Science & 4 & 63 & Finished \\ \hline
+	Computer Networks & 4 & 62 & Finished \\ \hline
+	Operational Investigation 1 & 3 & 61 & Finished \\ \hline
+	Software Development Workshop & 4 & 90 & Finished \\ \hline
+	Computer Systems Workshop & 4 & 90 & Finished \\ \hline
+	Management Systems & 3 & 77 & Finished \\ \hline
+	Graphic Computing & 3 & 85 & Finished \\ \hline
+	Computer Science and Society & 2 & 91 & Finished \\ \hline
+	Behaviour, Organization and Technology & 2 & 57 & Finished \\ \hline
+	Technologic Innovation & 3 & 92 & Finished \\ \hline
+	Business Process Modeling & 3 & 86 & Finished \\ \hline \hline
+
+	Introduction To Physics & 3 & 66 & Finished \\ \hline
+	Physics 1 & 5 & 63 & Finished \\ \hline
+	Physics 2  & 4 & 55 & Finished \\ \hline
+	Physics 3 & 4 & 58 & Finished \\ \hline
+	Physics 4 & 4 & 56 & Finished \\ \hline \hline
+
+	Math 1 & 5 & 63 & Finished \\ \hline
+	Math 2  & 5 & 58 & Finished \\ \hline
+	Math 3 & 4 & 55 & Finished \\ \hline \hline
+
+	English 1 & 1 & 100 & Finished \\ \hline
+	English 2 & 1 & 100 & Finished \\ \hline
+	English Conversation & 2 & 100 & Finished \\
+    \hline
+    \end{tabular}
+\end{center}
+
+
+\begin{center}
+    \begin{tabular}{ | l | c | c | c |}
+    \hline
+    \bf Course Name & \bf Credits & \bf Grade & \bf Status \\ \hline
+    
+    \hline
+	Introduction to Engineering & 2 & 90 & Finished \\ \hline
+	Chemistry & 3 & 57 & Finished \\ \hline
+	Personal Growth and Development & 2 & 84 & Finished \\ \hline
+	Estetic Vision of the Human Behaviour & 2 & 67 & Finished \\ \hline
+	Free Course & 1 & 100 & Finished \\ \hline
+	Free Course (iOS Development) & 1 & 73 & Finished \\ \hline
+	Free Course (Movie Theory) & 2 & 78 & Finished \\ \hline
+	Free Course (Math) & 4 & 57 & Finished \\ \hline
+	Project Evaluations & 3 & 66 & Finished \\ \hline
+	Economy 1 & 3 & 62 & Finished \\ \hline
+	Administration & 3 & 56 & Finished \\ \hline \hline
+
+	Physical Education 1 & 1 & 100 & Finished \\ \hline
+	Physical Education 2 & 1 & 100 & Finished \\ \hline
+	Basketball & 1 & 100 & Finished \\ \hline \hline
+
+	Computer Science Project Management Workshop & 4 & - & Enrolled \\ \hline
+	Operational Investigation 2 & 3 & - & Enrolled \\ \hline
+	Artificial Intelligence & 3 & - & Enrolled \\ \hline
+	Accountancy & 3 & - & Enrolled \\ \hline
+	Math 4 & 4 & - & Enrolled \\
+    \hline
+    \end{tabular}
+\end{center}
+
+\section{Scale, Credits and Other Info}
+The grading scale is from 0 to 100. The minimum to pass a class is 55. The credits represent how hard a class is, e.g.: a class with 5 credits is harder than a 2 credits class.
+
+I have \textbf{8 courses left} to finish my carreer. All of them are free courses or computer science elective courses, inluding the graduation memoir. I didn't included them because they don't provide too much information besides how much is left (wich is only 8 courses).
+\end{document}
