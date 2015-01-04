@@ -14,6 +14,7 @@ clean:
 	rm -rf *.aux
 	rm -rf *.blg
 	rm -rf *.bbl
+	rm -rf *.gz
 
 
 distclean:
