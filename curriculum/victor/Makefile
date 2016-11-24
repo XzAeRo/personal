@@ -1,4 +1,4 @@
-SRC=VictorGonzalez.en
+SRC=VictorGonzalez.es
 
 all:
 	pdflatex $(SRC).tex
