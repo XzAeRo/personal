@@ -25,6 +25,15 @@ sudo apt-get install texlive texlive-xetex texlive-luatex texlive-math-extra tex
 Compiling
 ---------
 
-```
+```bash
+# Generate the english CV
+make english
+# Clean auxiliary files
+make clean
+# Generate the spanish CV
+make spanish
+# Clean auxiliary files
+make clean
+# Or run all of the above
 make all
 ```
