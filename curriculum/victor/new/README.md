@@ -37,3 +37,5 @@ make clean
 # Or run all of the above
 make all
 ```
+
+Please note that `lualatex` will be slow the first time.
