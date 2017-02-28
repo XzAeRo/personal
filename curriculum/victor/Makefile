@@ -1,22 +1,10 @@
-SRC=VictorGonzalez.es
+english: VictorGonzalez.en.tex
+	lualatex VictorGonzalez.en.tex
 
-all:
-	pdflatex $(SRC).tex
-	BIBINPUTS=. bibtex $(SRC)
-	pdflatex $(SRC).tex
-	pdflatex $(SRC).tex
-	rm -rf *.{out,log,dvi,aux,blg,bbl}
-
+spanish: VictorGonzalez.es.tex
+	lualatex VictorGonzalez.es.tex
+	
 clean:
-	rm -rf *.out
-	rm -rf *.log
-	rm -rf *.dvi
-	rm -rf *.aux
-	rm -rf *.blg
-	rm -rf *.bbl
+	rm *.aux *.bcf *.log *.out *.xml
 
-
-distclean:
-	rm -rf $(SRC).pdf
-x:
-	xpdf $(SRC).pdf
+all: english clean spanish clean

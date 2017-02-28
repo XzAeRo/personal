@@ -1,179 +1,205 @@
-\documentclass[11pt,a4paper,sans]{moderncv}
-%\moderncvtheme[blue]{casual}
-\moderncvtheme[blue]{classic}
+%!TEX TS-program = lualatex
+\documentclass[]{friggeri-cv}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{smartdiagram}
+\usepackage{fontspec}
+% if you want to add fontawesome package
+% you need to compile the tex file with LuaLaTeX
+% References:
+%   http://texdoc.net/texmf-dist/doc/latex/fontawesome/fontawesome.pdf
+%   https://www.ctan.org/tex-archive/fonts/fontawesome?lang=en
+\usepackage{fontawesome}
+\usepackage{metalogo}
 \usepackage[utf8]{inputenc}
-\newcommand{\myname}{\textbf{Cristián Maureira}}
-\usepackage[scale=0.8]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}
-%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}
-\AtBeginDocument{\recomputelengths}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,shadows}
+\hypersetup{
+    pdftitle={Victor Gonzalez - Software Engineer},
+    pdfauthor={Victor Gonzalez},
+    pdfsubject={CV Victor Gonzalez},
+    pdfkeywords={cv, victor gonzalez, software engineer},
+    colorlinks=false,           % no lik border color
+    allbordercolors=white       % white border color for all
+}
+\smartdiagramset{
+    bubble center node font = \footnotesize,
+    bubble node font = \footnotesize,
+    % specifies the minimum size of the bubble center node
+    bubble center node size = 0.5cm,
+    %  specifies the minimum size of the bubbles
+    bubble node size = 0.5cm,
+    % specifies which is the distance among the bubble center node and the other bubbles
+    distance center/other bubbles = 0.3cm,
+    % sets the distance from the text to the border of the bubble center node
+    distance text center bubble = 0.5cm,
+    % set center bubble color
+    bubble center node color = pblue,
+    % define the list of colors usable in the diagram
+    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    % sets the opacity at which the bubbles are shown
+    bubble fill opacity = 0.6,
+    % sets the opacity at which the bubble text is shown
+    bubble text opacity = 0.5,
+}
 
-% personal data
-\firstname{Victor}
-\familyname{González}
-\title{Computer Science / Software Engineer}
-\address{Calle Del Copado \#3170}{Los Pinos, Quilpué, Chile}
-\mobile{+56 9 88972537}
-\phone{+56 32 2829009}
-%\fax{fax (optional)}
-\email{victor.gonzalezro@gmail.com}
-%\extrainfo{asdf}
-\photo[64pt]{cv}
-%\quote{Curriculum Vitae}
-%\nopagenumbers{}
+% \addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
 
-%content
 \begin{document}
-\maketitle
+\header{Victor}{Gonzalez}
+      {Full Stack Software Engineer}
+      
+% Fake text to add separator      
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+.....
+}}
 
-%\section{Personal Information}
-
-%\cvcomputer{Full Name}{Víctor Andrés Roberto González Rodríguez}
-%	   {Personal ID}{16.970.834-7}
-
-%\cvcomputer{Birthday}{27 July, 1988}
-%	   {Nationality}{Chilean}
-
-\section{Education}
-
-\cventry{2007 to 2014}
-        {Computer Science / Software Engineering}
-        {Universidad Técnica Federico Santa María (UTFSM)}
-        {Valparaíso, Chile}
-        {}
-        {}
-\cventry{1994-2006}
-        {Elementary and High School}
-        {Colegio Esperanza}
-        {Quilpué, Valparaíso, Chile}
-        {}{}
-
+% In the aside, each new line forces a line break
+\begin{aside}
+  \includegraphics[scale=0.18]{img/cv_circle.png}
+  \section{\faBookmark\space Personal Info}
+    \textbf{Marital Status:}\\ Married
+    \textbf{Home Country:}\\ Chile
+    \textbf{Birthday:}\\ 27 July, 1988
+    ~
+  \section{\faHome\space Address}
+    Las Barrancas 2581
+	Apt. E203
+	Quilpué
+	Chile
+    ~
+  \section{\faPhone\space Tel \& Skype}
+    \faMobile\space +56 9 8897 3537
+    \faSkype\space victor.gonzalezro
+    ~
+  \section{\faEnvelope\space Mail}
+    \href{mailto:victor.gonzalezro@gmail.com}{\textbf{victor.gonzalezro@}\\gmail.com}
+    ~
+  % use  \hspace{} or \vspace{} to change bubble size, if needed
+  \section{Programming}
+    \smartdiagram[bubble diagram]{
+        \textbf{PHP},
+        \textbf{Bash\vspace{3mm}},
+        \textbf{Java},
+        \textbf{React},
+        \textbf{Python},
+        \textbf{Node.JS},
+        \textbf{Docker},
+        \textbf{HTML}\\\textbf{JS}
+    }
+    ~
+  \section{Personal Skills}
+    \smartdiagram[bubble diagram]{
+        \textbf{Team}\\\textbf{Player},
+        \textbf{Initiative},
+        \textbf{Always}\\\textbf{Learning},
+        \textbf{Problem}\\\textbf{Solving},
+        \textbf{Solution}\\\textbf{Architect},
+        \textbf{TDD},
+        \textbf{Organized}
+    }
+    ~
+\end{aside}
+~
 \section{Experience}
-\subsection{Vocational}
+\begin{entrylist}
+  \entry
+    {07/16 - Now}
+    {Project Leader}
+    {Topten International Services}
+    {Lead the development of a new web platform, including the planning, budgeting and architecture design of the software, which included a 2 month internship in Zürich, Switzerland with the Topten Team.
+    \\\textbf{Keywords:} \emph{Project Management, TDD, Software Architecture.}\\}
+  \entry
+    {12/14 - Now}
+    {Full Stack Software Engineer}
+    {Fundación Chile}
+    {Development of several web platforms for private and public institutions of Chile. Mainly focused on energy efficency metrics, remote monitoring and control of electrical circuits using \emph{IoT and Big Data} solutions. These projects where developed from scratch, including the server stacks.
+    \\\textbf{Keywords:} \emph{IoT, Software/Server Architecture, TDD, PHP, Python, Node.JS, Big Data.}\\}
+  \entry
+    {02/14 - 11/14}
+    {Software Developer (Remote/Consulting)}
+    {Fundación Chile}
+    {Development of new reportability modules for an outdated energy efficiency platform, improving the UI/UX, and the inclusiong of Git versining.
+    \\\textbf{Keywords:} \emph{PHP, Git, UI/UX}\\}
+  \entry
+    {03/13 - 12/13}
+    {Software Development}
+    {SubRed EIRL Ltd.}
+    {Development of several static and dynamic pages for local businesses.
+    \\\textbf{Keywords:} \emph{Jekyll, Wordpress, Drupal, Alfresco.}\\}
+  \entry
+    {05/12 - 05/13}
+    {Academic Assistant}
+    {Laboratory of Interdisciplinary Research on Astro-Engineering}
+    {Maintaining and development of several software modules for the Atacama Large Millimiter Array Observatory, including the research for real time applications using distributed computing.
+    \\\textbf{Keywords:} \emph{Java, C++, Qt, Python}\\}
+  \entry
+    {03/11 - 11/12}
+    {Software Research Assistant}
+    {Computer Systems Research Group}
+    {Development of a project including low-level programming using bluetooth interfaces and distributed computing using a propietary framework of the European Southamerican Observatory (ESO).
+    \\\textbf{Keywords:} \emph{C++, Qt, Python, Java, Distributed Computing}\\}
+\end{entrylist}
+\\
+\section{Education}
+\begin{entrylist}
+  \entry
+    {2007 - 2015}
+    {Software and Computer Science Engineering}
+    {Universidad Técnica Federico Santa María, Valparaíso}
+    {5\+ years of software engineering and computer science classes, with a strong emphasis into project management, business intelligence, artificial intelligence and software architecture.\\}
+\end{entrylist}
 
-\cventry{July 2016 to August 2016}
-        {Project Management Consultant}
-        {Support in the reception and validation of web project fot Topten International Services (TIS) in Switzerland. The work was stablished as a collaboration between Fundación Chile and TIS for 50 days of work at Switzerland.}
-        {\textbf{Keywords:} Big Data, Project Management, Git}
-        {\textbf{Employer:} Topten International Services}
-        {}
+\newpage
 
-\cventry{December 2014 to Present}
-        {Software Project Management}
-        {Project management and development of web platforms related to reportability using Big Data implementations and Smart Energy solutions implementation (monitoring and remote electric control).}
-        {\textbf{Keywords:} Big Data, Project Management, Git, PHP, Node.JS, Python}
-        {\textbf{Employer:} Fundación Chile, \textbf{Clients:} Banco Estado de Chile, Ministerio de Viviendas y Urbanismo, Topten International Group}
-        {}
+\begin{aside}
+~
+~
+~
+  \section{\faNewspaperO\space Web \& Git}
+    \href{http://lnked.in/vagonzal}{\faLinkedin\space lnked.in/vagonzal}
+    \href{https://github.com/xzaero}{\faGithub\space github.com/xzaero}
+    \href{https://gitlab.com/xzaero}{\faGit\space gitlab.com/xzaero}
+    ~
+  \section{OS Preference}
+    \textbf{Ubuntu}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{MacOS}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{Windows}\includegraphics[scale=0.40]{img/4stars.png}
+    ~
+  \section{Languages}
+    \textbf{Spanish:} Native
+    \textbf{English:} Professional Proficiency
+    ~
+  \section{English Level (CEF)}
+    \textbf{Listening:} C1
+    \textbf{Reading:} C2
+	\textbf{Speaking:} C1
+	\textbf{Writing:} C2
+    ~
+\end{aside}
 
-
-\cventry{February 2014 to November 2014}
-        {Consultant}
-        {Development of energy efficiency platform using electric billings for all of the Banco Estado branches in Chile.}
-        {\textbf{Keywords:} PHP, Javascript, CSS3, Nginx, Linux, SSH, Python}
-        {\textbf{Employer:} Fundación Chile, \textbf{Client:} Banco Estado de Chile}
-        {}
-
-\cventry{March 2013 to December 2013}
-        {Software Development}
-        {Maintaining and development of web solutions for business, such as stock control, POS systems and web platforms.}
-        {\textbf{Keywords:} PHP, Javascript, CSS3, Apache, Nginx, Linux, SSH}
-        {\textbf{Employer:} SubRed EIRL Ltd}
-        {\url{http://www.subred.cl/}}
-
-\cventry{May 2012 to May 2013}
-        {Academic assistant at Laboratory Interdiciplinary Research on Astro-Engineering Research}
-        {Maintaining and development of the ALMA LEGO Simulator project (ALMA means \href{http://www.alma.cl/}{Atacama Millimeter/Submillimeter Array)}. Minor support and coding in other related projects.}
-        {\textbf{Keywords:} C/C++, documentación, Qt4}
-        {\textbf{Employer:} Computer Systems Research Group (CSRG), UTFSM}
-        {\url{http://twiki.csrg.cl/twiki/bin/view/ACS/LegoProjectIDI}}
-
-\cventry{March 2011 to November 2012}
-        {ALMA-UTFSM Research Assistant}
-        {Development of the ALMA LEGO Simulator Project. Development of the User Interface and integration with the distributed computing software \emph{ALMA Common Software (ALS)}}
-        {\textbf{Keywords:} C/C++, Qt4, J2EE, Python, Bash, ALMA Common Software Framework}
-        {\textbf{Employer:} Computer Systems Research Group (CSRG), UTFSM}
-        {\url{http://twiki.csrg.cl/twiki/bin/view/ACS/LegoProjectFsw}}
-
-\cventry{April 2010 to July 2011}
-        {Project Member - Developer}
-        {Development of a private CRM platform for the Red de Ex-Alumnos USM, built on J2EE and Hibernate.}
-        {\textbf{Employer:} Red de Ex-Alumnos USM / UTFSM}
-        {}
-        {\url{http://www.exalumnos.usm.cl/}}
-
-\subsection{Internships}
-
-
-\cventry{December 2012 to March 2013}
-        {Software Development and Research}
-        {Fork of the PHP framework Yii for organization needs. Fork of the OpenERP project for research of compatibility with local business. Development of web-based solutions for business}
-        {SubRed EIRL Ltd}
-        {}
-        {\url{http://www.subred.cl/}}
-
-
-\subsection{Miscellaneous}
-
-
-\cventry{2009-2010}
-        {Developer and co-founder}
-        {BBS/IB Bienvenido a Internet (Welcome to the internet). Software built in Python}
-        {}
-        {}
-        {\url{http://www.bienvenidoainternet.org/}}
-\cventry{April 2014}
-        {Free Web Development For Animal Rescue Organization}
-        {After a massive fire in Valparaiso, I offered my services to build a database of lost and needed pets}
-        {}
-        {}
-        {\url{http://www.emergencianimal.org/}}
-
-\section{Languages}
-\cvlanguage{Spanish}{Native}{Speaks, Reads, Writes, Technical and Colloquial}
-\cvlanguage{English}{Gold TOEIC certification}{920 points: International Professional Proficiency}
-
-\section{Computer Systems Skills}
-\cvcomputer{Programming}{C/C++, Python, J2EE, C\#}
-           {Parallel}{CUDA (primitive), POSIX threads}
-\cvcomputer{O.S.}{Linux Distros, Windows XP and up, OSX}
-           {Miscellaneous}{Numpy, \LaTeX}
-\cvcomputer{SysAdmin}{Apache, Git}
-           {WebDev}{PHP, Node.JS, React.JS, CSS3, MySQL, PostgreSQL, HTML5, Javascript (JQuery, JSON, AJAX)}
-
-\section{Events Attendance}
-
-\cventry{2012}
-        {Quantum Information Processing}
-        {Short talks about the state-of-the-art on quantum computing}
-        {Professor Dan Marinescu, University of Central Florida}
-        {Valparaíso, Chile}
-        {\url{http://cci.inf.utfsm.cl/?p=399}}
-
-\cventry{2012}
-        {Cloud Computing}
-        {Short talks about the state-of-the-art on cloud computing}
-        {Professor Dan Marinescu, University of Central Florida}
-        {Valparaíso, Chile}
-        {\url{http://cci.inf.utfsm.cl/?p=399}}
-
-\cventry{2011}
-        {ENEI-CLI}
-        {Encuentro Nacional de Estudiantes de Ingeniería, Congreso Latinoamericano de Ingeniería}
-        {International gathering of engineering students of South America}
-        {Tandil, Argentina \url{http://www.cefce.com.ar/?p=3154}}
-        {}
-
-\cventry{2011}
-        {Encuentro Linux}
-        {National gathering of Linux users}
-        {Presentation about the ALMA LEGO Simulator project and the ALMA Common Software integration}
-        {Puerto Montt, Chile}
-        {\url{http://2011.encuentrolinux.cl/}}
-
-\section{Honor and Awards}
-
-\cvlistitem{Innovation Award 2011 for the ALMA LEGO Project given by %
-            ``International Institute for the Bussiness Innovation (3IE)'', UTFSM}
+\section{Relevant Skills}
+\textbf{Software/Server Architecture}\\
+\emph{Wide knowledge of cloud based solutions.}\\
+For the past 3 years, I've been working deeply with several server architectures, from Virtual Machines to Amazon Web Services solutions, and the corresponding software architectures.\\
+\\
+\textbf{Continuous Integration/Deployment}\\
+\emph{Continuously involved in fast delivery projects.}\\
+I have useful knowledge about using Continuous Integration platforms like Travis and Gitlab CI.
+\\
+\section{Honors \& Awards}
+\begin{entrylist}
+  \entry
+    {3/2012}
+    {Most Innovative Project}
+    {Software Fair, Santiago, Chile}
+    {Given for the \emph{ALMA LEGO Simulator} project.\\
+    Project developed with the support of the \emph{European Southamerican Observatory} (ESO).}
+\end{entrylist}
 
 
 \end{document}
