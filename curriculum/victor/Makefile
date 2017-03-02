@@ -8,10 +8,10 @@ english: VictorGonzalez.en.tex
 spanish: VictorGonzalez.es.tex
 	$(CC) VictorGonzalez.es.tex
 	
-relayr: cover\ letters/relayr.tex
-	$(CC) cover\ letters/relayr.tex
+relayr: cover\ letters/VictorGonzalez.relayr.tex
+	$(CC) cover\ letters/VictorGonzalez.relayr.tex
 	
 clean:
 	rm *.aux *.bcf *.log *.out *.xml
 
-all: english clean spanish clean
+all: english clean spanish clean relayr clean
