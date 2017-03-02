@@ -77,6 +77,10 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
+\RequirePackage{fontawesome}
+% Set the FontAwesome font to be up-to-date.
+\newfontfamily\FA[Path=fonts/]{FontAwesome.ttf}
+
 \newfontfamily\bodyfont
 [Path=fonts/, BoldFont=texgyreheros-bold.otf,
 ItalicFont=texgyreheros-italic.otf,
